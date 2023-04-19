@@ -28,7 +28,7 @@ const Product = (props) => {
   function addToCart() {
     dispatch(addItem({ id, orderAmount,price:product.MealPrice, name:product.MealName, img:product.MealImage }));
     setOrderAmount(1);
-    navigate("/dashboard");
+    navigate("/");
   }
   return (
     toggleModal && (

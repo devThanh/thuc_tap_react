@@ -15,8 +15,9 @@ import PropTypes from 'prop-types';
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [data] = useFetch("https://thucannhanh-production.up.railway.app/loginadmin")
+  console.log(data)
   function handleSubmit(){
-    navigate('/loginadmin')
+    navigate('/admintoken')
 
   }
 
@@ -29,7 +30,7 @@ import PropTypes from 'prop-types';
           <h3 className="form-header">Welcome Back! </h3>
           <form method='POST' onSubmit={handleSubmit}>
             <input placeholder="Your username" name='username'  onChange={(e) => setUsername(e.target.value)}></input>
-            <input placeholder="Your Password" name='password'  onChange={(e) => setPassword(e.target.value)}></input>
+            <input placeholder="Your Password" name='password' type='password' onChange={(e) => setPassword(e.target.value)}></input>
             <button className="submit-button" type="submit">Login</button>
           </form>
           <div className="form-footer">

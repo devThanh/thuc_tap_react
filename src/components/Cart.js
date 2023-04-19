@@ -13,7 +13,7 @@ const Cart = (props) => {
     const handleSubmit = (event) => {
         console.log(event.value)
         event.preventDefault();
-        navigate("/payment");
+        navigate("/checkout");
       };
   const toggleModal = useSelector((state) => state.modal.IsOpen);
   const cartItems = useSelector((state) => state.cart.cart);
@@ -38,7 +38,7 @@ const Cart = (props) => {
                     <th>Item</th>
                     <th>Qty</th>
                     <th>Unit Price</th>
-                    <th>Sub-total</th>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -84,19 +84,7 @@ const Cart = (props) => {
                                 .price
                             } </p>
                         </td>
-                        <td>
-                          <p>       
-                          {
-                              cartItems.find((meal) => meal.id === id)
-                                .orderAmount
-                            }                     
-                            {/* {Number(
-                              MealPrice *
-                                cartItems.find((meal) => meal.id === id)
-                                  .orderAmount
-                            )} */}
-                          </p>
-                        </td>
+                        
                       </tr>
                     )
                   )}

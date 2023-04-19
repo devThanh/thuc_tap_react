@@ -9,7 +9,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function Dashboard() {
-  const [data] = useFetch('https://thucannhanh-production.up.railway.app/food')
+  const [data] = useFetch("https://thucannhanh-production.up.railway.app/food");
   //console.log(data)
   return (
     <div className="dashboard-container">
@@ -23,21 +23,22 @@ function Dashboard() {
           {/* <div>
             <img src={profileImage} alt="profile-pic" />
           </div> */}
-        </div> 
+        </div>
         <div className="dashboard-main">
-        {data && data.map((item)=>{
-          return ( 
-            <FoodCard 
-              foodName={item.name}
-              foodImage={item.image}
-              foodDescription={item.ingredient}
-              foodPrice={item.price}
-              key={item.id.toString()}
-              id={item.id}
-              meal={item}
-            />
-          )
-        })}
+          {data &&
+            data.map((item) => {
+              return (
+                <FoodCard
+                  foodName={item.name}
+                  foodImage={item.image}
+                  foodDescription={item.ingredient}
+                  foodPrice={item.price}
+                  key={item.id.toString()}
+                  id={item.id}
+                  meal={item}
+                />
+              );
+            })}
           {/* {AvailableMeals.map((meal) => {
             return (
               <FoodCard
@@ -53,7 +54,7 @@ function Dashboard() {
           })} */}
         </div>
       </div>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }

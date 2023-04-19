@@ -25,6 +25,7 @@ main.form-page{
     background-color: rgba(226, 184, 135, 0.4);
 }
 form{
+    justify-content: center;
     display: flex;
     flex-direction: column;
     width: 80%;

@@ -5,8 +5,6 @@ import { addProduct } from "../features/productSlice";
 function FoodCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  //console.log(props.foodImgage)
-  // const toggleModal = useSelector((state) => state);
   return (
     <div className="card-container">
       <div className="card-top">

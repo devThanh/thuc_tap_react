@@ -26,14 +26,16 @@
 .card-container {
   border: 0.3px solid rgba(0, 48, 46, 0.1);
   background: rgba(255, 255, 255, 0.83);
-  max-width: 210px;
-  min-width: 210px;
+  max-width: 250px;
+  min-width: 250px;
   padding: 2rem 0.8rem;
   border-radius: 5px;
 }
 
 .card-img {
-  height: 5rem;
+  height: 8rem;
+  object-fit: fill;
+  overflow: hidden;
 }
 
 .card-top {

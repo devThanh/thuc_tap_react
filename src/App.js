@@ -11,6 +11,8 @@ import Cart from './components/Cart'
 import Product from './components/Product';
 import Checkout  from './components/Checkout'
 import Admin from './components/admin/Admin';
+import AdminPage from './components/admin/AdminPage';
+//import {} from 'reactstrap';
 
 
 function App() {
@@ -20,12 +22,15 @@ function App() {
       <React.StrictMode>
         <Router>
           <Routes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/home" exact element={<Home />} />
             <Route path="/checkout" exact element={<Checkout />} />
             <Route path="/signup" exact element={<SignUp />} />
-            <Route path="/login" exact element={<Login />} />
+            <Route path="/admin" exact element={<Login />}>
+              
+            </Route>
+            <Route path='/dashboard' exact element={<AdminPage/>}/>
             <Route path="/admintoken" exact element={<Admin />} />
-            <Route path="/dashboard" exact element={<Dashboard />}>
+            <Route path="/" exact element={<Dashboard />}>
               <Route path="product/:id" exact element={<Product />} />
               <Route path="order" exact element={<Order />} />
               <Route path="profile" exact element={<Profile />} />

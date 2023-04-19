@@ -35,7 +35,7 @@ const Sidebar = () => {
               Your Profile
             </li> */}
             
-            <li className="nav-item" onClick={()=>navigate('/dashboard/cart')}>
+            <li className="nav-item" onClick={()=>navigate('/cart')}>
               <span className="sidebar-icon">
                 <img src={vector} alt="badge"></img>
               </span>
